@@ -8,7 +8,7 @@
 
     <TextView
         android:id="@+id/tvDatosNombre"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="27dp"
         android:layout_marginBottom="8dp"
         android:text="@string/datosNombre"
@@ -21,7 +21,7 @@
 
     <TextView
         android:id="@+id/tvDatosCorreo"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="27dp"
         android:text="@string/datosCorreo"
         android:textColor="#000000"
@@ -31,11 +31,23 @@
         app:layout_constraintTop_toBottomOf="@+id/tvDatosNombre" />
 
     <TextView
+        android:id="@+id/tvDatosConferenciaIniciada"
+        android:layout_width="218dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/datosConferencia"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvConferencia"
+        app:layout_constraintTop_toBottomOf="@+id/tvDatosCorreo" />
+
+    <TextView
         android:id="@+id/tvNombre"
         android:layout_width="77dp"
         android:layout_height="27dp"
         android:text="@string/nombre"
-        android:textColor="#000000"
+        android:textColor="#FF0000"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/tvCorreo"
         app:layout_constraintEnd_toStartOf="@+id/tvDatosNombre"
@@ -49,10 +61,78 @@
         android:layout_width="66dp"
         android:layout_height="27dp"
         android:text="@string/correo"
-        android:textColor="#000000"
+        android:textColor="#FF0000"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/tvDatosCorreo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
+
+    <TextView
+        android:id="@+id/tvConferencia"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/conferencia"
+        android:textColor="#0585EC"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvDatosConferenciaIniciada"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCorreo" />
+
+    <Spinner
+        android:id="@+id/spListaConferencias"
+        android:layout_width="283dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ibInfoConferencia"
+        app:layout_constraintTop_toBottomOf="@+id/tvDatosConferenciaIniciada" />
+
+    <ImageButton
+        android:id="@+id/ibInfoConferencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/spListaConferencias"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDatosConferenciaIniciada"
+        app:srcCompat="@android:drawable/ic_menu_view" />
+
+    <EditText
+        android:id="@+id/edtMensajes"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:hint="@string/sendmessage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ibEnviar"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvMensajes" />
+
+    <ImageButton
+        android:id="@+id/ibEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edtMensajes"
+        app:layout_constraintTop_toBottomOf="@+id/rvMensajes"
+        app:srcCompat="@android:drawable/ic_menu_send" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMensajes"
+        android:layout_width="409dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/edtMensajes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ibInfoConferencia" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

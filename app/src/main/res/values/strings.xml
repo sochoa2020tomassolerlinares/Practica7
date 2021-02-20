@@ -10,4 +10,15 @@
     <string name="telefono">Teléfono:</string>
     <string name="telefonoPorDefecto">123456789</string>
     <string name="info_empresa">Información de la empresa</string>
+    <string name="OK">OK</string>
+    <string name="infoConferencia">Información de la Conferencia</string>
+    <string name="saltoLinea">\n</string>
+    <string name="fecha">"Fecha: "</string>
+    <string name="sala">"Sala: "</string>
+    <string name="horario">"Horario: "</string>
+    <string name="conferencia">Conferencia Iniciada: </string>
+    <string name="datosConferencia">Conferencia iniciada</string>
+    <string name="sendmessage">Escribe tu mensaje...</string>
+    <string name="mensaje">Usuario@Correo.es => Mensaje</string>
+    <string name="iguala"><![CDATA[" => "]]></string>
 </resources>
