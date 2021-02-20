@@ -26,7 +26,7 @@ public class EmpresaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_empresa);
         obtenDatosEmpresa();
     }
-
+    //No Funciona
     //Método para leer los datos solamente una vez de Firebase
     void obtenDatosEmpresa() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
