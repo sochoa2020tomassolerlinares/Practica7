@@ -1,4 +1,4 @@
-package net.iessochoa.tomassolerlinares.practica7;
+package net.iessochoa.tomassolerlinares.practica7.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,13 +7,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import net.iessochoa.tomassolerlinares.practica7.ui.EmpresaActivity;
+import net.iessochoa.tomassolerlinares.practica7.MainActivity;
+import net.iessochoa.tomassolerlinares.practica7.R;
 
 public class InicioAppActivity extends AppCompatActivity {
     //Instancia de autenticación

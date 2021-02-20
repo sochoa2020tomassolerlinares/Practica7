@@ -11,6 +11,8 @@ import com.firebase.ui.auth.ErrorCodes;
 import com.firebase.ui.auth.IdpResponse;
 import com.google.firebase.auth.FirebaseAuth;
 
+import net.iessochoa.tomassolerlinares.practica7.ui.InicioAppActivity;
+
 public class MainActivity extends AppCompatActivity {
     //constante para identificación
     private static final int RC_SIGN_IN = 100;
