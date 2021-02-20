@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "885581175745",
+    "project_id": "p72021-tomassolerlinares",
+    "storage_bucket": "p72021-tomassolerlinares.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885581175745:android:429823591f06c7d0a3ed40",
+        "android_client_info": {
+          "package_name": "net.iessochoa.tomassolerlinares.practica5"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "885581175745-47bqftufsjpp6jeu4n424r4b697q7q4d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDblK38ke3KwZoYxBhCQXV9gN1dwW6ll0U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "885581175745-47bqftufsjpp6jeu4n424r4b697q7q4d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885581175745:android:b73cb32b8b8febd9a3ed40",
+        "android_client_info": {
+          "package_name": "net.iessochoa.tomassolerlinares.practica7"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "885581175745-47bqftufsjpp6jeu4n424r4b697q7q4d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDblK38ke3KwZoYxBhCQXV9gN1dwW6ll0U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "885581175745-47bqftufsjpp6jeu4n424r4b697q7q4d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

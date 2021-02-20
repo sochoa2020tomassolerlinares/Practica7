@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InicioAppActivity">
+
+    <TextView
+        android:id="@+id/tvDatosNombre"
+        android:layout_width="300dp"
+        android:layout_height="27dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/datosNombre"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvDatosCorreo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvNombre"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDatosCorreo"
+        android:layout_width="300dp"
+        android:layout_height="27dp"
+        android:text="@string/datosCorreo"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvCorreo"
+        app:layout_constraintTop_toBottomOf="@+id/tvDatosNombre" />
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="77dp"
+        android:layout_height="27dp"
+        android:text="@string/nombre"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvCorreo"
+        app:layout_constraintEnd_toStartOf="@+id/tvDatosNombre"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/tvCorreo"
+        android:layout_width="66dp"
+        android:layout_height="27dp"
+        android:text="@string/correo"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvDatosCorreo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

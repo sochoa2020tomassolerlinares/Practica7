@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.EmpresaActivity">
+
+    <TextView
+        android:id="@+id/tvNombreEmpresa"
+        android:layout_width="323dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/nombre_empresa"
+        android:textAlignment="center"
+        android:textColor="#CA1D1D"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDireccion"
+        android:layout_width="62dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="95dp"
+        android:text="@string/direccion"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvDireccionTexto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombreEmpresa" />
+
+    <TextView
+        android:id="@+id/tvDireccionTexto"
+        android:layout_width="291dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="95dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvDireccion"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombreEmpresa" />
+
+    <TextView
+        android:id="@+id/tvTelefono"
+        android:layout_width="73dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/telefono"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/tvTelefonoTexto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDireccionTexto" />
+
+    <TextView
+        android:id="@+id/tvTelefonoTexto"
+        android:layout_width="72dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/telefonoPorDefecto"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvTelefono"
+        app:layout_constraintTop_toBottomOf="@+id/tvDireccionTexto" />
+</androidx.constraintlayout.widget.ConstraintLayout>

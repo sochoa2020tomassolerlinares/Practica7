@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Practica7</string>
+    <string name="datosNombre">Tomás Soler</string>
+    <string name="datosCorreo">practica7@correo.es</string>
+    <string name="nombre">Nombre:</string>
+    <string name="correo">Correo:</string>
+    <string name="cerrarSesion">Cerrar Sesión</string>
+    <string name="nombre_empresa">nombre empresa</string>
+    <string name="direccion">Dirección:</string>
+    <string name="telefono">Teléfono:</string>
+    <string name="telefonoPorDefecto">123456789</string>
+    <string name="info_empresa">Información de la empresa</string>
+</resources>
