@@ -23,22 +23,22 @@
         android:id="@+id/tvDireccion"
         android:layout_width="62dp"
         android:layout_height="19dp"
-        android:layout_marginTop="95dp"
+        android:layout_marginTop="60dp"
         android:text="@string/direccion"
         android:textColor="#000000"
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/tvDireccionTexto"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNombreEmpresa" />
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
 
     <TextView
         android:id="@+id/tvDireccionTexto"
         android:layout_width="291dp"
         android:layout_height="92dp"
-        android:layout_marginTop="95dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/tvDireccion"
-        app:layout_constraintTop_toBottomOf="@+id/tvNombreEmpresa" />
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
 
     <TextView
         android:id="@+id/tvTelefono"
@@ -47,18 +47,31 @@
         android:layout_marginTop="24dp"
         android:text="@string/telefono"
         android:textColor="#000000"
-        app:layout_constraintEnd_toStartOf="@+id/tvTelefonoTexto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDireccionTexto" />
 
     <TextView
         android:id="@+id/tvTelefonoTexto"
-        android:layout_width="72dp"
+        android:layout_width="wrap_content"
         android:layout_height="19dp"
         android:layout_marginTop="24dp"
         android:text="@string/telefonoPorDefecto"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/tvTelefono"
         app:layout_constraintTop_toBottomOf="@+id/tvDireccionTexto" />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="188dp"
+        android:layout_height="177dp"
+        android:layout_marginTop="25dp"
+        android:contentDescription="Imagen de la empresa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombreEmpresa"
+        app:srcCompat="@android:drawable/ic_dialog_dialer" />
 </androidx.constraintlayout.widget.ConstraintLayout>
