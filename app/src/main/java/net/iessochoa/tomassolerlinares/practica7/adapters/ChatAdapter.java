@@ -7,6 +7,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -41,27 +42,17 @@ public class ChatAdapter extends FirestoreRecyclerAdapter<Mensaje, ChatAdapter.C
     protected void onBindViewHolder(@NonNull ChatAdapter.ChatHolder holder, int position, @NonNull Mensaje mensaje) {
         if (mensaje != null) {
             //si el mensaje es del usuario lo colocamos a la izquierda
-            if (InicioAppActivity.usuario != null && InicioAppActivity.usuario != "") {
+            if (InicioAppActivity.usuario != null && mensaje.getUsuario() != null) {
                 String usuario = InicioAppActivity.usuario;
                 if (mensaje.getUsuario().equals(usuario)) {
                     holder.cvMensaje.setCardBackgroundColor(Color.CYAN);
-                    ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) holder.tvMensaje.getLayoutParams();
-                    params.horizontalBias = 0.0f;
-                    holder.tvMensaje.setLayoutParams(params);
+                    holder.lytMensaje.setGravity(Gravity.LEFT);
                 } else {
                     holder.cvMensaje.setCardBackgroundColor(Color.LTGRAY);
-                    ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) holder.tvMensaje.getLayoutParams();
-                    params.horizontalBias = 0.0f;
-                    holder.tvMensaje.setLayoutParams(params);
+                    holder.lytMensaje.setGravity(Gravity.RIGHT);
                 }
             }
-            /*if (mensaje.getUsuario().equals(InicioAppActivity.usuario)) {
-                holder.cvMensaje.setCardBackgroundColor(Color.YELLOW);
-                holder.lytMensaje.setGravity(Gravity.LEFT);
-            } else {
-                holder.lytContenedor.setGravity(Gravity.RIGHT);
-                holder.cvContenedor.setCardBackgroundColor(Color.WHITE);
-            }*/
+
             holder.tvMensaje.setText(mensaje.getUsuario() + " => " + mensaje.getBody());
         }
     }
@@ -77,13 +68,13 @@ public class ChatAdapter extends FirestoreRecyclerAdapter<Mensaje, ChatAdapter.C
     public class ChatHolder extends RecyclerView.ViewHolder {
         private final TextView tvMensaje;
         private final CardView cvMensaje;
-        private final ConstraintLayout lytMensaje;
+        private final LinearLayout lytMensaje;
 
         public ChatHolder(@NonNull View itemView) {
             super(itemView);
-            lytMensaje = itemView.findViewById(R.id.lytMensaje);
+            lytMensaje = itemView.findViewById(R.id.lytMensajes);
             cvMensaje = itemView.findViewById(R.id.cvMensaje);
-            tvMensaje = itemView.findViewById(R.id.tvMensaje);
+            tvMensaje = itemView.findViewById(R.id.tvMensajes);
         }
     }
 }
