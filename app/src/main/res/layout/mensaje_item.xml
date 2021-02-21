@@ -11,14 +11,14 @@
     card_view:cardUseCompatPadding="true">
 
     <LinearLayout
+        android:id="@+id/lytMensajes"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:id="@+id/lytMensajes">
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tvMensajes"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/mensaje"

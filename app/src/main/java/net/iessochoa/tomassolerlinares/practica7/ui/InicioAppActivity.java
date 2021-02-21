@@ -93,7 +93,7 @@ public class InicioAppActivity extends AppCompatActivity {
         usuario = usrFB.getDisplayName();
         tvDatosCorreo.setText(usrFB.getEmail());
 
-        //
+        //Muestra la información de la conferencia seleccionada
         ibInfoConferencia.setOnClickListener(v -> {
             androidx.appcompat.app.AlertDialog.Builder builder = new AlertDialog.Builder(InicioAppActivity.this);
             builder.setTitle(R.string.infoConferencia);
@@ -109,12 +109,15 @@ public class InicioAppActivity extends AppCompatActivity {
             builder.create().show();
         });
 
+        //Almacena en conferenciaActual la conferencia
         spListaConferencias.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                for (int i = 0; i > listaConferencias.size(); i++) {
-                    if (parent.getItemAtPosition(position).equals(listaConferencias.get(i).getNombre())) {
+                String conferencia = (String) spListaConferencias.getSelectedItem();
+                for (int i = 0; i < listaConferencias.size(); i++) {
+                    if (conferencia.equals(listaConferencias.get(i).getNombre())) {
                         conferenciaActual = listaConferencias.get(i);
+                        defineAdaptador();
                     }
                 }
             }

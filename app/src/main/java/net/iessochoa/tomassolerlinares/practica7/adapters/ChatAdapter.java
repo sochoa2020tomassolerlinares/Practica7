@@ -44,16 +44,15 @@ public class ChatAdapter extends FirestoreRecyclerAdapter<Mensaje, ChatAdapter.C
             //si el mensaje es del usuario lo colocamos a la izquierda
             if (InicioAppActivity.usuario != null && mensaje.getUsuario() != null) {
                 String usuario = InicioAppActivity.usuario;
+                holder.tvMensaje.setText(mensaje.getUsuario() + " => " + mensaje.getBody());
                 if (mensaje.getUsuario().equals(usuario)) {
+                    holder.tvMensaje.setGravity(Gravity.END);
                     holder.cvMensaje.setCardBackgroundColor(Color.CYAN);
-                    holder.lytMensaje.setGravity(Gravity.LEFT);
                 } else {
+                    holder.tvMensaje.setGravity(Gravity.START);
                     holder.cvMensaje.setCardBackgroundColor(Color.LTGRAY);
-                    holder.lytMensaje.setGravity(Gravity.RIGHT);
                 }
             }
-
-            holder.tvMensaje.setText(mensaje.getUsuario() + " => " + mensaje.getBody());
         }
     }
 
