@@ -1,5 +1,7 @@
 package net.iessochoa.tomassolerlinares.practica7.model;
-
+/**
+ * Clase encargada de definir las constantes finales de los objetos de firebase.
+ */
 public class FirebaseContract {
     public static class EmpresaEntry{
         public static final String NODE_NAME = "empresas";

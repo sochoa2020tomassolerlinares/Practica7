@@ -1,14 +1,11 @@
 package net.iessochoa.tomassolerlinares.practica7.ui;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,18 +24,14 @@ import android.widget.TextView;
 import com.firebase.ui.common.ChangeEventType;
 import com.firebase.ui.firestore.ChangeEventListener;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 
 import net.iessochoa.tomassolerlinares.practica7.MainActivity;
 import net.iessochoa.tomassolerlinares.practica7.R;
@@ -54,6 +47,7 @@ public class InicioAppActivity extends AppCompatActivity {
     public static String usuario;
     //Instancia de autenticación
     FirebaseAuth auth;
+
     ArrayList<Conferencia> listaConferencias;
     Spinner spListaConferencias;
     TextView tvDatosConferenciaIniciada, tvDatosNombre, tvDatosCorreo;
@@ -109,7 +103,7 @@ public class InicioAppActivity extends AppCompatActivity {
             builder.create().show();
         });
 
-        //Almacena en conferenciaActual la conferencia
+        //Almacena en conferenciaActual la conferencia y define el adaptador del chat dependiendo de la conferencia
         spListaConferencias.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -128,6 +122,7 @@ public class InicioAppActivity extends AppCompatActivity {
             }
         });
 
+        //Envía un mensaje al pulsar el botón enviar.
         ibEnviar.setOnClickListener(v -> {
             enviarMensaje();
         });

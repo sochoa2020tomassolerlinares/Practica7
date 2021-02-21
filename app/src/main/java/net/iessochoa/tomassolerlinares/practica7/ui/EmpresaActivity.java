@@ -4,18 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import net.iessochoa.tomassolerlinares.practica7.R;
 import net.iessochoa.tomassolerlinares.practica7.model.Empresa;
 import net.iessochoa.tomassolerlinares.practica7.model.FirebaseContract;
 
+/**
+ * Clase Activity encargada de cargar los datos de la empresa de firebase y mostrarlos.
+ */
 public class EmpresaActivity extends AppCompatActivity {
 
     private Empresa empresa;
@@ -24,6 +24,7 @@ public class EmpresaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_empresa);
+        //Se obtienen los datos de la empresa
         obtenDatosEmpresa();
     }
 
@@ -41,19 +42,15 @@ public class EmpresaActivity extends AppCompatActivity {
             tvNombreEmpresa.setText(empresa.getNombre());
             tvDireccionTexto.setText(empresa.getDireccion());
             tvTelefonoTexto.setText(empresa.getTelefono());
-            tvDireccionTexto.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    // Llamada a la actividad implicita de la localizacion
-                    Intent intent = new Intent(Intent.ACTION_VIEW, empresa.getUriLocalizacion());
-                    startActivity(intent);
-                }
+            tvDireccionTexto.setOnClickListener(v -> {
+                // Llamada a la actividad implicita de la localizacion
+                Intent intent = new Intent(Intent.ACTION_VIEW, empresa.getUriLocalizacion());
+                startActivity(intent);
             });
 
-            tvTelefonoTexto.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    // Llamada a la actividad implicita del telefono
-                    startActivity(new Intent(Intent.ACTION_VIEW, empresa.getUriTelefono()));
-                }
+            tvTelefonoTexto.setOnClickListener(v -> {
+                // Llamada a la actividad implicita del telefono
+                startActivity(new Intent(Intent.ACTION_VIEW, empresa.getUriTelefono()));
             });
         });
     }

@@ -1,6 +1,5 @@
 package net.iessochoa.tomassolerlinares.practica7.adapters;
 
-import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Build;
 import android.view.Gravity;
@@ -13,13 +12,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 import net.iessochoa.tomassolerlinares.practica7.R;
 import net.iessochoa.tomassolerlinares.practica7.model.Mensaje;
@@ -41,7 +37,8 @@ public class ChatAdapter extends FirestoreRecyclerAdapter<Mensaje, ChatAdapter.C
     @Override
     protected void onBindViewHolder(@NonNull ChatAdapter.ChatHolder holder, int position, @NonNull Mensaje mensaje) {
         if (mensaje != null) {
-            //si el mensaje es del usuario lo colocamos a la izquierda
+            //si el mensaje es del usuario lo colocamos a la izquierda y ponemos el fondo azul
+            //Si no, se pone a la derecha con un fondo gris claro
             if (InicioAppActivity.usuario != null && mensaje.getUsuario() != null) {
                 String usuario = InicioAppActivity.usuario;
                 holder.tvMensaje.setText(mensaje.getUsuario() + " => " + mensaje.getBody());
@@ -64,6 +61,7 @@ public class ChatAdapter extends FirestoreRecyclerAdapter<Mensaje, ChatAdapter.C
         return new ChatHolder(itemView);
     }
 
+    //Se definen los contenedores del item
     public class ChatHolder extends RecyclerView.ViewHolder {
         private final TextView tvMensaje;
         private final CardView cvMensaje;

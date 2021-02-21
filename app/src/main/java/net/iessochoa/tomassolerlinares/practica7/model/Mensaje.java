@@ -3,7 +3,9 @@ package net.iessochoa.tomassolerlinares.practica7.model;
 import com.google.firebase.firestore.ServerTimestamp;
 
 import java.util.Date;
-
+/**
+ * Clase POJO encargada de definir el objeto Mensaje de firebase
+ */
 public class Mensaje {
     String usuario;
     String body;

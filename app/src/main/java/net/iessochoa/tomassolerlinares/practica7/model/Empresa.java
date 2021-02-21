@@ -3,7 +3,9 @@ package net.iessochoa.tomassolerlinares.practica7.model;
 import android.net.Uri;
 
 import com.google.firebase.firestore.GeoPoint;
-
+/**
+ * Clase POJO encargada de definir el objeto Empresa de firebase
+ */
 public class Empresa {
     private String direccion;
     private GeoPoint localizacion;
@@ -51,10 +53,11 @@ public class Empresa {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-
+    //Devuelve una uri con el teléfono.
     public Uri getUriTelefono(){
         return Uri.parse("tel:"+telefono);
     }
+    //Devuelve una uri con las coordenadas de la geolocalización
     public Uri getUriLocalizacion() {
         return Uri.parse("geo:"+localizacion.getLatitude()+","+
                 localizacion.getLongitude());

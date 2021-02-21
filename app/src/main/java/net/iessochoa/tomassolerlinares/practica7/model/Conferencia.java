@@ -1,10 +1,12 @@
 package net.iessochoa.tomassolerlinares.practica7.model;
 
-import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+/**
+ * Clase POJO encargada de definir el objeto Conferencia de firebase
+ */
 public class Conferencia {
 
     private boolean encurso;
